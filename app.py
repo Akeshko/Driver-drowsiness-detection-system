@@ -1,4 +1,3 @@
-from altair.vegalite.v4.schema.channels import Color
 import cv2
 import dlib
 from scipy.spatial import distance
