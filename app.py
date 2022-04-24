@@ -43,7 +43,7 @@ camera = cv2.VideoCapture(0)
 
 hog_face_detector = dlib.get_frontal_face_detector()
 face_cas=cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
-dlib_facelandmark = dlib.shape_predictor("\shape_predictor_68_face_landmarks.dat")
+dlib_facelandmark = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 score=0
 while run:
     ret, frame = camera.read()
