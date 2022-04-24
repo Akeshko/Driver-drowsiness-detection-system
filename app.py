@@ -24,9 +24,9 @@ eb=st.sidebar.slider("Blue",0,255,255)
 
 face_points=st.sidebar.checkbox("Facial Landmarks")
 
-sound=st.sidebar.button("Check Alarm")
+#sound=st.sidebar.button("Check Alarm")
 if sound:
-    winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
+    #winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
     
 def calculate_EAR(eye):
     A = distance.euclidean(eye[1], eye[5])
@@ -35,7 +35,8 @@ def calculate_EAR(eye):
     ear_aspect_ratio = (A+B)/(2.0*C)
     return ear_aspect_ratio
 
-st.title("Driver Drowniness System")
+#st.title("Driver Drowniness System")
+st.title("Face Detection System")
 
 run = st.checkbox('Run')
 FRAME_WINDOW = st.image([])
@@ -97,22 +98,22 @@ while run:
         EAR = (left_ear+right_ear)/2
         EAR = round(EAR,2)
         
-        if(EAR<0.21):
-            score=score+1
-            cv2.putText(frame,"Closed",(20,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
-            cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        #if(EAR<0.21):
+            #score=score+1
+            #cv2.putText(frame,"Closed",(20,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
+            #cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
             # if(rpred[0]==1 or lpred[0]==1):
-        else:
-            score=score-1
-            cv2.putText(frame,"Open",(20,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
-            if(score<1):
-                score=0
-                cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
-            else:
-                cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        #else:
+            #score=score-1
+            #cv2.putText(frame,"Open",(20,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
+            #if(score<1):
+                #score=0
+                #cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+            #else:
+                #cv2.putText(frame,'Score:'+str(score),(500,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
         
-        if(score>8):
-            score=0
+        #if(score>8):
+            #score=0
             #winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
             #playsound('TF016.WAV')
             
@@ -123,8 +124,6 @@ while run:
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     FRAME_WINDOW.image(frame)
 
-    key = cv2.waitKey(1)
-    if key == 27:
-        break
+    
 camera.release()
 #cv2.destroyAllWindows()
