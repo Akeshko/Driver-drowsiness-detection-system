@@ -1,6 +1,6 @@
 streamlit
 dlib
-opencv
+opencv-python-headless
 playsound
 winsound
 scipy
