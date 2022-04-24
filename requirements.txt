@@ -1,5 +1,6 @@
 streamlit
-cv2
+dlib
+opencv
 playsound
 winsound
 scipy
