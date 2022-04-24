@@ -3,5 +3,6 @@ CMake
 dlib-bin
 opencv-python-headless
 playsound
+winsound
 scipy
 distance
