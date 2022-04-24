@@ -25,7 +25,7 @@ eb=st.sidebar.slider("Blue",0,255,255)
 face_points=st.sidebar.checkbox("Facial Landmarks")
 
 #sound=st.sidebar.button("Check Alarm")
-if sound:
+#if sound:
     #winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
     
 def calculate_EAR(eye):
