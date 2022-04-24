@@ -39,7 +39,7 @@ st.title("Driver Drowniness System")
 
 run = st.checkbox('Run')
 FRAME_WINDOW = st.image([])
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(-1)
 
 hog_face_detector = dlib.get_frontal_face_detector()
 face_cas=cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
