@@ -1,6 +1,6 @@
 streamlit
 CMake
-dlib
+dlib-bin
 opencv-python-headless
 playsound
 scipy
