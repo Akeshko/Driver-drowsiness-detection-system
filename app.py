@@ -2,7 +2,7 @@ import cv2
 import dlib
 from scipy.spatial import distance
 from playsound import playsound
-import winsound
+#import winsound
 import streamlit as st
 
 st.sidebar.header("User Input Features")
@@ -113,7 +113,7 @@ while run:
         
         if(score>8):
             score=0
-            winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
+            #winsound.PlaySound("TF016.WAV", winsound.SND_ASYNC | winsound.SND_ALIAS )
             #playsound('TF016.WAV')
             
         
