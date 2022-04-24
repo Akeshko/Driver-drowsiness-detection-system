@@ -2,7 +2,7 @@ import cv2
 import dlib
 from scipy.spatial import distance
 from playsound import playsound
-import winsound
+#import winsound
 import streamlit as st
 
 
@@ -84,7 +84,7 @@ while True:
         
         if(score>80):
             score=0
-            winsound.PlaySound('TF016.WAV', winsound.SND_ASYNC)
+            #winsound.PlaySound('TF016.WAV', winsound.SND_ASYNC)
         
         
     cv2.imshow("Are you Sleepy", frame)
