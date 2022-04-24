@@ -1,0 +1,7 @@
+streamlit
+dlib
+cv2
+playsound
+winsound
+scipy
+distance
