@@ -1,4 +1,5 @@
 streamlit
+CMake
 dlib
 opencv-python-headless
 playsound
