@@ -2,6 +2,6 @@ streamlit
 dlib
 opencv-python-headless
 playsound
-winsound
+winsound-python-headless
 scipy
 distance
